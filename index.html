@@ -1,737 +1,190 @@
 <!DOCTYPE html>
-<html lang="es" data-theme="light">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meta-Responsive Docs | Diseño Fluido: Del Caos al Orden</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <title>Fiddlesticks El Demonio del Terror</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./img/logo-fiddlesticks.png" type="image/x-icon">
+    
 </head>
-<body class="body">
-    <!-- Navbar Superior Elegante -->
-    <nav class="navbar" aria-label="Navegación principal">
-        <!-- Logo -->
-        <div class="navbar__brand">
-            <svg class="navbar__logo" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="12 3 20 7.5 20 16.5 12 21 4 16.5 4 7.5 12 3"></polyline>
-            </svg>
-            <span class="navbar__title">Meta-Responsive</span>
-        </div>
+<body>
+    <header class="header" role="banner">
+            <div class="header__inner">
+                <a href="#" class="header__brand" aria-label="Fiddlesticks Blog">
+                    <i class="bi bi-mask" aria-hidden="true"></i>
+                    <span>Fiddlesticks Blog</span>
+                </a>
 
-        <!-- Botón Hamburguesa -->
-        <button class="navbar__toggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="navbar-menu">
-            <svg class="navbar__toggle-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="3" y1="6" x2="21" y2="6"></line>
-                <line x1="3" y1="12" x2="21" y2="12"></line>
-                <line x1="3" y1="18" x2="21" y2="18"></line>
-            </svg>
-        </button>
+                <nav id="main-nav" class="nav" role="navigation" aria-label="Menú principal">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#inicio" class="nav__link">Inicio</a></li>
+                        <li class="nav__item"><a href="#lore" class="nav__link">Historia</a></li>
+                        <li class="nav__item"><a href="#guia" class="nav__link">Guía</a></li>
+                        <li class="nav__item"><a href="#builds" class="nav__link">Builds</a></li>
+                        <li class="nav__item"><a href="#recursos" class="nav__link">Recursos</a></li>
+                    </ul>
+                </nav>
 
-        <!-- Menú Principal -->
-        <ul class="navbar__menu" id="navbar-menu">
-            <!-- Item con dropdown: Fundamentos -->
-            <li class="navbar__item navbar__item--dropdown">
-                <button class="navbar__link navbar__link--dropdown" aria-expanded="false" aria-haspopup="true">
-                    📚 Fundamentos
-                    <svg class="navbar__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                </button>
-                <ul class="navbar__submenu">
-                    <li><a href="#inicio" class="navbar__sublink">🏠 Inicio</a></li>
-                    <li><a href="#intro" class="navbar__sublink">🎯 Introducción</a></li>
-                    <li><a href="#tipografia" class="navbar__sublink">📐 Tipografía Fluida</a></li>
-                </ul>
-            </li>
-
-            <!-- Item con dropdown: Diseño -->
-            <li class="navbar__item navbar__item--dropdown">
-                <button class="navbar__link navbar__link--dropdown" aria-expanded="false" aria-haspopup="true">
-                    🎨 Diseño
-                    <svg class="navbar__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                </button>
-                <ul class="navbar__submenu">
-                    <li><a href="#colores" class="navbar__sublink">🎨 Design Tokens</a></li>
-                    <li><a href="#grid" class="navbar__sublink">📊 CSS Grid</a></li>
-                    <li><a href="#flexbox" class="navbar__sublink">🎀 Flexbox</a></li>
-                </ul>
-            </li>
-
-            <!-- Item con dropdown: Técnicas -->
-            <li class="navbar__item navbar__item--dropdown">
-                <button class="navbar__link navbar__link--dropdown" aria-expanded="false" aria-haspopup="true">
-                    ⚙️ Técnicas
-                    <svg class="navbar__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                </button>
-                <ul class="navbar__submenu">
-                    <li><a href="#media" class="navbar__sublink">📱 Media Queries</a></li>
-                    <li><a href="#tabla" class="navbar__sublink">📋 Tablas Responsivas</a></li>
-                </ul>
-            </li>
-
-            <!-- Item con dropdown: Práctica -->
-            <li class="navbar__item navbar__item--dropdown">
-                <button class="navbar__link navbar__link--dropdown" aria-expanded="false" aria-haspopup="true">
-                    ✏️ Práctica
-                    <svg class="navbar__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                </button>
-                <ul class="navbar__submenu">
-                    <li><a href="#accesibilidad" class="navbar__sublink">♿ Accesibilidad</a></li>
-                    <li><a href="#formulario" class="navbar__sublink">📝 Formulario</a></li>
-                    <li><a href="#resumen" class="navbar__sublink">✨ Resumen</a></li>
-                </ul>
-            </li>
-        </ul>
-
-        <!-- Botones de Acción (derecha) -->
-        <div class="navbar__actions">
-            <button class="navbar__theme-btn" aria-label="Cambiar tema oscuro/claro">
-                <svg class="navbar__theme-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="5"></circle>
-                    <line x1="12" y1="1" x2="12" y2="3"></line>
-                    <line x1="12" y1="21" x2="12" y2="23"></line>
-                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                    <line x1="1" y1="12" x2="3" y2="12"></line>
-                    <line x1="21" y1="12" x2="23" y2="12"></line>
-                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                </svg>
-            </button>
-        </div>
-
-        <!-- Overlay para menú móvil -->
-        <div class="navbar__overlay"></div>
-    </nav>
-
-    <!-- Layout principal -->
-    <div class="layout">
-        <!-- Contenedor principal -->
-        <div class="main-container">
-            <!-- Hero Section -->
-            <section class="hero" id="inicio">
-                <div class="hero__content">
-                    <h1 class="hero__title">Diseño Fluido: Del Caos al Orden</h1>
-                    <p class="hero__text">Bienvenido a la documentación viva. Esta página es un ejemplo práctico de cómo CSS Grid (Macro-layout) y Flexbox (Micro-layout) conviven en armonía. Cambia el tamaño de tu navegador para ver la magia.</p>
+                <div class="header__actions">
+                    <a href="#contacto" class="form-button">Contacto</a>
+                    <button class="header__toggle js-menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">
+                        <i class="bi bi-list" aria-hidden="true"></i>
+                        <span class="sr-only">Abrir menú</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+    <div class="page-container">
+        <main class="main">
+            <section class="page-intro">
+                <h1>Artículos sobre Fiddlesticks</h1>
+                <p>Análisis de builds, lore profundo y jugadas destacadas.</p>
+                <div class="tags">
+                    <span class="tag">Jungla</span>
+                    <span class="tag">Terror</span>
+                    <span class="tag">Mago</span>
                 </div>
             </section>
-
-            <!-- Widgets Area -->
-            <aside class="widgets">
-                <!-- Widget 1: Progreso del Curso -->
-                <div class="widget widget--stats">
-                    <h3 class="widget__title">Progreso del Curso</h3>
-                    <div class="widget__stat">
-                        <span class="widget__percentage">75%</span>
-                        <p class="widget__description">Módulos completados con Flexbox y Grid.</p>
+            
+            <section class="articles-grid">
+                <article class="card card--1">
+                    <div class="card__image-container">
+                        <img class="card__image" src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/FiddleSticks_37.jpg" alt="Fiddlesticks Fiesta Sorpresa">
                     </div>
-                    <div class="widget__progress">
-                        <div class="widget__progress-bar" style="width: 75%"></div>
+                    <h2>La Primera Semilla del Miedo</h2>
+                    <p>Fiddlesticks no es un demonio, sino la encarnación del primer miedo que experimentó Runaterra. Su existencia precede incluso a los Nueve Demonios conocidos, representando el concepto de terror absoluto y primordial.</p>
+                </article>
+                <article class="card card--2">
+                    <h2>Builds Anti-Tanque</h2>
+                    <p>En este parche, la clave contra tanques es la penetración mágica, priorizando la Malevolencia y el Bastón del Vacío.</p>
+                </article>
+                <article class="card--3 card">
+                    <h2>El Gankeo Perfecto</h2>
+                    <p>El gankeo ideal de Fiddlesticks depende totalmente de la 'Sorpresa'. Siempre ultea desde un ángulo inesperado.</p>
+                </article>
+                <article class="card card--4">
+                    <h2>Counter Picks</h2>
+                    <p>Cuidado con campeones con mucho control de masas (CC) o campeones que puedan interrumpir tu canalización de la W.</p>
+                </article>
+                <article class="card--5 card">
+                    <h2>Runas</h2>
+                    <p>Opta por el Cometa Arcano en partidas contra enemigos blandos o la Cosecha Oscura si esperas una partida larga.</p>
+                </article>
+                <article class="card--6 card">
+                    <div class="card__image-container">
+                        <img class="card__image" src="https://www.mobafire.com/images/champion/skins/landscape/fiddlesticks-flora-fatalis-762x.jpg" alt="Fiddlesticks Fiesta Sorpresa">
                     </div>
-                </div>
-
-                <!-- Widget 2: Tag Cloud -->
-                <div class="widget widget--tags">
-                    <h3 class="widget__title">Tecnologías</h3>
-                    <div class="widget__tags-container">
-                        <span class="widget__tag">HTML5</span>
-                        <span class="widget__tag">Semántica</span>
-                        <span class="widget__tag">CSS Grid</span>
-                        <span class="widget__tag">Flexbox</span>
-                        <span class="widget__tag">BEM</span>
-                        <span class="widget__tag">A11y</span>
-                        <span class="widget__tag">SVG</span>
-                        <span class="widget__tag">Design Tokens</span>
+                    <h2>Control de Visión</h2>
+                    <p>El control de visión con las efigies (Wards) es tu arma más letal. Colócalas estratégicamente para simular tu presencia, forzar errores del enemigo o usarlas como punto de salto para tu definitiva (R).</p>
+                </article>
+                <article class="card--7 card">
+                    <div class="card__image-container">
+                        <img class="card__image" src="https://piks.eldesmarque.com/thumbs/o/1200/bin/esports/2020/04/Fiddlesticks_8.jpg" alt="Fiddlesticks alzado/Fiddlesticks Resucitado">
                     </div>
-                </div>
-            </aside>
-
-            <!-- Main Content -->
-            <main class="main">
-                <!-- Sección 1: Introducción a Responsive Design -->
-                <section class="section" id="intro">
-                    <h2 class="section__title">🎯 Introducción al Diseño Responsive</h2>
-                    <p class="section__text">El diseño responsive es la metodología moderna para crear sitios web que se adapten fluidamente a cualquier tamaño de pantalla: desde teléfonos móviles (320px) hasta monitores de escritorio (1920px+). En esta documentación, aprenderás paso a paso cómo implementar un sistema de diseño profesional usando CSS Grid, Flexbox y Media Queries.</p>
-                    
-                    <!-- Imagen responsiva horizontal -->
-                    <figure class="section__figure">
-                        <img 
-                            src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&h=600&fit=crop" 
-                            alt="Dispositivos múltiples mostrando diseño responsivo"
-                            class="section__image"
-                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 1000px"
-                            loading="lazy"
-                        >
-                        <figcaption class="section__figcaption">Diseño responsivo adaptable a múltiples dispositivos</figcaption>
-                    </figure>
-                    
-                    <div class="content-grid">
-                        <article class="card">
-                            <h3 class="card__title">📱 Mobile First</h3>
-                            <p class="card__text">Comenzamos diseñando para el dispositivo más pequeño (móvil). Esto es contrario a la intuición tradicional, pero ofrece enormes beneficios: código más limpio, mejores prioridades de contenido y mejor rendimiento.</p>
-                        </article>
-                        <article class="card">
-                            <h3 class="card__title">🔄 Escala Fluida</h3>
-                            <p class="card__text">Usamos <code>clamp()</code> para crear tipografía y espaciado que escalan fluidamente. Esto elimina la necesidad de múltiples breakpoints para ajustes menores de tamaño.</p>
-                        </article>
-                        <article class="card">
-                            <h3 class="card__title">🎨 Design Tokens</h3>
-                            <p class="card__text">Implementamos variables CSS para colores, tipografía y espaciado. Esto centraliza el control del diseño y permite cambios globales instantáneos, incluyendo temas oscuro/claro.</p>
-                        </article>
+                    <h2>Sinergias</h2>
+                    <p>Fiddlesticks brilla junto a campeones con fuertes efectos de agrupamiento (como Orianna o Diana) que permiten maximizar el daño de tu R en el equipo enemigo completo. ¡La sinergia es clave!</p>
+                </article>
+                <article class="card--8 card">
+                    <h2>Habilidades al Detalle</h2>
+                    <p>El Terror de la Q es crucial para encadenar tu definitiva. Aprende a usarlo inmediatamente después del salto.</p>
+                </article>
+                <article class="card--9 card">
+                    <h2>Consejos Pro</h2>
+                    <p>Nunca subestimes el poder de curación de la W. Úsala contra monstruos de la jungla y súbditos para mantenerte saludable.</p>
+                </article>
+                <article class="card--10 card">
+                     <div class="card__image-container">
+                        <img class="card__image" src="https://preview.redd.it/a-fucker-sent-me-this-and-told-me-its-the-new-fiddlesticks-v0-cu7a2ogdfe1d1.jpeg?auto=webp&s=2146b3f48f713b9c3942a64d2309d042a628a714" alt="Fiddlesticks bandido/Fiddlesticks Pistolero">
+                     </div>
+                    <h2>La Historia Completa del Horror</h2>
+                    <p>Exploramos los orígenes del demonio, desde su aparición como un espantapájaros hasta su actual encarnación como el terror primordial.</p>
+                </article>
+                <article class="card--11 card">
+                    <div class="card__image-container">
+                        <img class="card__image" src="https://www.lolvvv.com/_next/image?url=https%3A%2F%2Fddragon.leagueoflegends.com%2Fcdn%2Fimg%2Fchampion%2Fsplash%2FFiddlesticks_4.jpg&w=1200&q=75" alt="Fiddlesticks caracalabaza/Fiddlesticks Cabeza de Calabaza">
                     </div>
-                </section>
-
-                <!-- Sección 2: Tipografía Fluida -->
-                <section class="section" id="tipografia">
-                    <h2 class="section__title">📐 Tipografía Fluida: Escalado Perfecto</h2>
-                    <p class="section__text">La tipografía tradicional requiere múltiples media queries para escalar. Con <code>clamp()</code>, conseguimos escalado fluido automático:</p>
-                    
-                    <!-- Imagen responsiva vertical -->
-                    <figure class="section__figure section__figure--portrait">
-                        <img 
-                            src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=700&fit=crop" 
-                            alt="Tipografía y escalas de texto"
-                            class="section__image"
-                            sizes="(max-width: 768px) 100vw, 400px"
-                            loading="lazy"
-                        >
-                        <figcaption class="section__figcaption">Escalado fluido de tipografía</figcaption>
-                    </figure>
-                    
-                    <div class="code-block">
-                        <pre><code>/* Tipografía Fluida */
-:root {
-    --font-size-base: clamp(1rem, 0.95rem + 0.25vw, 1.2rem);
-    --font-size-2xl: clamp(2rem, 1.85rem + 0.75vw, 2.625rem);
-}</code></pre>
-                    </div>
-
-                    <h3 class="subsection__title">¿Cómo funciona clamp()?</h3>
-                    <p class="section__text">La función <code>clamp(min, preferred, max)</code> tiene tres parámetros:</p>
-                    
-                    <ul class="numbered-list">
-                        <li><strong>min (1rem):</strong> El tamaño mínimo en dispositivos muy pequeños</li>
-                        <li><strong>preferred (0.95rem + 0.25vw):</strong> Valor que escala con el viewport (vw = viewport width)</li>
-                        <li><strong>max (1.2rem):</strong> El tamaño máximo en pantallas grandes</li>
-                    </ul>
-
-                    <p class="section__text section__text--highlight">En móvil (375px): ~1rem | En tablet (768px): ~1.07rem | En desktop (1920px): ~1.2rem</p>
-
-                    <h3 class="subsection__title">Ventajas de la tipografía fluida:</h3>
-                    <ul class="benefits-list">
-                        <li>✓ Escalado suave y continuo sin saltos abruptos</li>
-                        <li>✓ Menos media queries necesarias</li>
-                        <li>✓ Mejor ratio de contraste en todos los tamaños</li>
-                        <li>✓ Mejor experiencia de lectura</li>
-                    </ul>
-                </section>
-
-                <!-- Sección 3: Colores y Design Tokens -->
-                <section class="section" id="colores">
-                    <h2 class="section__title">🎨 Sistema de Colores: Design Tokens</h2>
-                    <p class="section__text">Los Design Tokens centralizan todas las decisiones de diseño. En CSS nativo, usamos variables (<code>--nombre-variable</code>) que se actualizan según el tema:</p>
-
-                    <div class="color-grid">
-                        <div class="color-sample">
-                            <div class="color-box" style="background-color: #F0F2F5; border: 1px solid #ddd;"></div>
-                            <p class="color-label">Light BG: #F0F2F5</p>
-                        </div>
-                        <div class="color-sample">
-                            <div class="color-box" style="background-color: #0F172A;"></div>
-                            <p class="color-label">Dark BG: #0F172A</p>
-                        </div>
-                        <div class="color-sample">
-                            <div class="color-box" style="background-color: #6366F1;"></div>
-                            <p class="color-label">Brand: #6366F1</p>
-                        </div>
-                        <div class="color-sample">
-                            <div class="color-box" style="background-color: #10B981;"></div>
-                            <p class="color-label">Accent: #10B981</p>
-                        </div>
-                    </div>
-
-                    <div class="code-block">
-                        <pre><code>/* Variables en Light Mode */
-:root {
-    --bg-body: #F0F2F5;
-    --text-primary: #111827;
-    --brand-color: #6366F1;
-}
-
-/* Variables en Dark Mode */
-[data-theme="dark"] {
-    --bg-body: #0F172A;
-    --text-primary: #F8FAFC;
-    --brand-color: #818CF8;
-}</code></pre>
-                    </div>
-                </section>
-
-                <!-- Sección 4: CSS Grid -->
-                <section class="section" id="grid">
-                    <h2 class="section__title">📊 CSS Grid: Layouts Asimétricos</h2>
-                    <p class="section__text">CSS Grid es ideal para layouts complejos y asimétricos. En esta web usamos 3 configuraciones según el tamaño:</p>
-
-                    <!-- Imagen responsiva horizontal -->
-                    <figure class="section__figure">
-                        <img 
-                            src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop" 
-                            alt="Layouts complejos con CSS Grid"
-                            class="section__image"
-                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 1000px"
-                            loading="lazy"
-                        >
-                        <figcaption class="section__figcaption">Layouts flexibles y asimétricos con CSS Grid</figcaption>
-                    </figure>
-
-                    <h3 class="subsection__title">Mobile: 1 Columna (&lt; 768px)</h3>
-                    <p class="section__text">En dispositivos móviles, todo fluye en una sola columna para evitar quiebres horizontales:</p>
-                    <div class="code-block">
-                        <pre><code>.layout {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0;
-}
-
-/* Flujo: Header → Hero → Widgets → Main → Footer */</code></pre>
-                    </div>
-
-                    <h3 class="subsection__title">Tablet: 2 Columnas (768px - 1023px)</h3>
-                    <p class="section__text">En tablets, el sidebar aparece fijo a la izquierda con contenido fluido a la derecha:</p>
-                    <div class="code-block">
-                        <pre><code>.layout {
-    display: grid;
-    grid-template-columns: 250px 1fr;  /* Sidebar + Contenido */
-}
-
-.sidebar {
-    position: sticky;
-    height: 100vh;  /* Ocupar toda la altura del viewport */
-}</code></pre>
-                    </div>
-
-                    <h3 class="subsection__title">Desktop: 12 Columnas - Asimétrico (&gt; 1024px)</h3>
-                    <p class="section__text">En desktop, usamos un grid de 12 columnas para máxima flexibilidad:</p>
-                    <div class="code-block">
-                        <pre><code>.main-container {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: var(--space-lg);
-}
-
-.sidebar    { grid-column: 1 / 3; }      /* Cols 1-2 */
-.header     { grid-column: 2 / -1; }     /* Cols 2-12 */
-.hero       { grid-column: 2 / 10; }     /* Cols 2-9 (7 columnas) */
-.widgets    { grid-column: 10 / -1; }    /* Cols 10-12 (3 columnas) */
-.main       { grid-column: 2 / -1; }     /* Cols 2-12 */</code></pre>
-                    </div>
-
-                    <p class="section__text section__text--highlight">Nota: Usamos <code>fr</code> (fracciones) en lugar de porcentajes. Las fracciones respetan automáticamente el <code>gap</code>, evitando desbordamientos.</p>
-                </section>
-
-                <!-- Sección 5: Flexbox -->
-                <section class="section" id="flexbox">
-                    <h2 class="section__title">🎀 Flexbox: Componentes y Alineación</h2>
-                    <p class="section__text">Mientras que Grid maneja el macro-layout (estructura general), Flexbox excelente para micro-layouts (componentes individuales):</p>
-
-                    <!-- Imagen responsiva vertical -->
-                    <figure class="section__figure section__figure--portrait">
-                        <img 
-                            src="https://diegoamorin.com/wp-content/uploads/2024/12/flex-basis.png" 
-                            alt="Componentes con Flexbox"
-                            class="section__image"
-                            sizes="(max-width: 768px) 100vw, 400px"
-                            loading="lazy"
-                        >
-                        <figcaption class="section__figcaption">Componentes flexibles y adaptables</figcaption>
-                    </figure>
-
-                    <h3 class="subsection__title">Ejemplo 1: Navbar Flexible</h3>
-                    <div class="code-block">
-                        <pre><code>.header {
-    display: flex;
-    align-items: center;       /* Alineación vertical centrada */
-    justify-content: space-between;
-    padding: var(--space-md);
-}
-
-/* Logo a la izquierda, botones a la derecha */</code></pre>
-                    </div>
-
-                    <h3 class="subsection__title">Ejemplo 2: Widgets Apilados</h3>
-                    <div class="code-block">
-                        <pre><code>.widgets {
-    display: flex;
-    flex-direction: column;    /* Apilar verticalmente */
-    gap: var(--space-lg);      /* Espaciado entre tarjetas */
-}
-
-/* Cada widget ocupa el 100% del ancho */</code></pre>
-                    </div>
-
-                    <h3 class="subsection__title">Ejemplo 3: Tags Responsivos</h3>
-                    <div class="code-block">
-                        <pre><code>.widget__tags-container {
-    display: flex;
-    flex-wrap: wrap;           /* Envuelve a la siguiente línea */
-    gap: var(--space-sm);
-}
-
-/* Los tags se distribuyen automáticamente */</code></pre>
-                    </div>
-
-                    <p class="section__text">Propiedad importante: <code>gap</code> crea espaciado uniforme sin necesidad de márgenes complejos.</p>
-                </section>
-
-                <!-- Sección 6: Media Queries -->
-                <section class="section" id="media">
-                    <h2 class="section__title">📱 Media Queries: Puntos de Quiebre</h2>
-                    <p class="section__text">Las Media Queries aplican estilos condicionales según características del dispositivo. Usamos <code>min-width</code> para Mobile First:</p>
-
-                    <h3 class="subsection__title">Estructura Mobile First</h3>
-                    <div class="code-block">
-                        <pre><code>/* MOBILE: Estilos base (sin media query) */
-.main-container {
-    display: grid;
-    grid-template-columns: 1fr;
-}
-
-/* TABLET: Modificar para pantallas &gt;= 768px */
-@media (min-width: 768px) {
-    .main-container {
-        grid-template-columns: 250px 1fr;
-    }
-}
-
-/* DESKTOP: Modificar para pantallas &gt;= 1024px */
-@media (min-width: 1024px) {
-    .main-container {
-        grid-template-columns: repeat(12, 1fr);
-    }
-}</code></pre>
-                    </div>
-
-                    <p class="section__text">Ventaja: Los estilos base se cargan siempre. Las media queries solo agregan/modifican lo necesario. Esto resulta en CSS más limpio y eficiente.</p>
-
-                    <h3 class="subsection__title">Breakpoints Recomendados</h3>
-                    <ul class="breakpoints-list">
-                        <li><strong>Mobile:</strong> 320px - 767px (Sin media query)</li>
-                        <li><strong>Tablet:</strong> 768px - 1023px (@media min-width: 768px)</li>
-                        <li><strong>Desktop:</strong> 1024px+ (@media min-width: 1024px)</li>
-                    </ul>
-                </section>
-
-                <!-- Sección: Tabla -->
-                <section class="section" id="tabla">
-                    <h2 class="section__title">📋 Tablas Responsivas: Card View</h2>
-                    <p class="section__text">Las tablas HTML tradicionales rompen el layout en pantallas pequeñas. La solución profesional no es poner un scroll horizontal, sino transformar las filas en tarjetas usando <code>display: flex</code> y <code>data-*</code> attributes:</p>
-
-                    <h3 class="subsection__title">Mobile: Card View</h3>
-                    <div class="code-block">
-                        <pre><code>/* Ocultar header y convertir filas a tarjetas */
-.table__head {
-    display: none;  /* No visible en móvil */
-}
-
-.table__row {
-    display: flex;
-    flex-direction: column;  /* Una celda por línea */
-    margin-bottom: 1rem;
-    padding: 1rem;
-    background-color: var(--bg-body);
-    border-radius: 0.5rem;
-}
-
-/* Inyectar labels desde data-label */
-.table__cell::before {
-    content: attr(data-label);
-    font-weight: 600;
-    display: block;
-}</code></pre>
-                    </div>
-
-                    <h3 class="subsection__title">Desktop: Tabla Tradicional</h3>
-                    <div class="code-block">
-                        <pre><code>@media (min-width: 768px) {
-    .table__head {
-        display: table-header-group;  /* Mostrar header */
-    }
-    
-    .table__row {
-        display: table-row;  /* Volver a fila normal */
-    }
-    
-    .table__cell::before {
-        display: none;  /* Ocultar labels */
-    }
-}</code></pre>
-                    </div>
-
-                    <h3 class="subsection__title">Comparativa: Flexbox vs Grid vs Block</h3>
-
-                    <div class="table-wrapper">
-                        <table class="table">
-                            <thead class="table__head">
-                                <tr class="table__row">
-                                    <th class="table__header">Propiedad</th>
-                                    <th class="table__header">Eje Principal</th>
-                                    <th class="table__header">Eje Secundario</th>
-                                    <th class="table__header">Uso Ideal</th>
+                    <h2>Mantenimiento de la Jungla</h2>
+                    <p>Tu prioridad debe ser el nivel 6. Farmea rápido y usa la curación de la W para no perder tiempo regresando a base.</p>
+                </article>
+                <article class="card--12 card">
+                    <h2>Itemización</h2>
+                    <p>El reloj de arena de Zhonya es un objeto esencial. Te permite usar tu definitiva y luego volverte invulnerable.</p>
+                </article>
+                <article class="card--13 card">
+                    <h2>Aspectos</h2>
+                    <p>Revisamos los mejores aspectos de Fiddlesticks, desde el clásico 'Pirata' hasta el épico 'Estrella Oscura'.</p>
+                </article>
+                <article class="card--14 card">
+                    <h2>Errores Comunes</h2>
+                    <p>El error más grande es usar tu definitiva sin el elemento 'Sorpresa'. Siempre guarda tu R para un gankeo inesperado.</p>
+                </article>
+                <article class="card--15 card">
+                    <h2>Próximas Actualizaciones</h2>
+                    <p>Analizamos los posibles cambios en el siguiente parche y cómo podrían afectar las runas y la itemización de Fiddlesticks.</p>
+                </article>
+            </section>
+            <div class="pagination" style="display:flex; justify-content: center; padding: 2rem 0;">
+                <button class="form-button" style="width: auto; margin-right: 1rem;">&#x25C0; Anterior</button>
+                <span style="align-self: center;">Página 1 de 10</span>
+                <button class="form-button" style="width: auto; margin-left: 1rem;">Siguiente &#x25B6;</button>
+            </div>
+            <section class="utilities">
+                
+                <div class="utility__item utility__item--table">
+                    <h2>Estadísticas del Campeón</h2>
+                    <div class="table-container">
+                         <table class="styled-table">
+                            <thead>
+                                <tr>
+                                    <th>Estadística</th>
+                                    <th>Base</th>
+                                    <th>Crecimiento</th>
                                 </tr>
                             </thead>
-                            <tbody class="table__body">
-                                <tr class="table__row">
-                                    <td class="table__cell" data-label="Propiedad"><code>display: flex</code></td>
-                                    <td class="table__cell" data-label="Eje Principal"><code>justify-content</code></td>
-                                    <td class="table__cell" data-label="Eje Secundario"><code>align-items</code></td>
-                                    <td class="table__cell" data-label="Uso Ideal">Componentes simples, navegación, alineación</td>
-                                </tr>
-                                <tr class="table__row">
-                                    <td class="table__cell" data-label="Propiedad"><code>display: grid</code></td>
-                                    <td class="table__cell" data-label="Eje Principal"><code>grid-auto-flow</code></td>
-                                    <td class="table__cell" data-label="Eje Secundario"><code>grid-template-rows</code></td>
-                                    <td class="table__cell" data-label="Uso Ideal">Layouts complejos, sistemas de 2D, asimétricos</td>
-                                </tr>
-                                <tr class="table__row">
-                                    <td class="table__cell" data-label="Propiedad"><code>display: block</code></td>
-                                    <td class="table__cell" data-label="Eje Principal">N/A</td>
-                                    <td class="table__cell" data-label="Eje Secundario">N/A</td>
-                                    <td class="table__cell" data-label="Uso Ideal">Flujo de documento, textos, elementos por defecto</td>
-                                </tr>
+                            <tbody>
+                                <tr><td>Vida</td><td>580</td><td>106</td></tr>
+                                <tr><td>Maná</td><td>500</td><td>30</td></tr>
+                                <tr><td>Armadura</td><td>30</td><td>4.5</td></tr>
+                                <tr><td>Velocidad Mov.</td><td>335</td><td>0</td></tr>
+                                <tr><td>Daño de Ataque</td><td>55</td><td>2.6</td></tr>
                             </tbody>
-                        </table>
+                         </table>
                     </div>
-                </section>
-
-                <!-- Sección: Accesibilidad -->
-                <section class="section" id="accesibilidad">
-                    <h2 class="section__title">♿ Accesibilidad (WCAG AA)</h2>
-                    <p class="section__text">Un sitio web responsivo debe ser accesible para todos. Aquí aplicamos los principios WCAG 2.1 nivel AA:</p>
-
-                    <h3 class="subsection__title">1. Contraste de Colores (4.5:1)</h3>
-                    <p class="section__text">Todo texto debe tener un ratio de contraste de al menos 4.5:1 respecto al fondo:</p>
-                    <div class="contrast-demo">
-                        <div class="contrast-box" style="background-color: #111827; color: #F8FAFC; padding: 1rem;">
-                            <p>✓ Contraste 17:1 (EXCELENTE)</p>
+                </div>
+                
+                <div class="utility__item utility__item--form">
+                    <h2>Contáctanos (Formulario)</h2>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nombre:</label>
+                            <input id="name" type="text" class="form-input" placeholder="Tu nombre" required>
                         </div>
-                        <div class="contrast-box" style="background-color: #F0F2F5; color: #64748B; padding: 1rem;">
-                            <p>✓ Contraste 6.5:1 (BUENO)</p>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input id="email" type="email" class="form-input" placeholder="tu@email.com" required>
                         </div>
-                    </div>
-
-                    <h3 class="subsection__title">2. Elementos Interactivos Visibles</h3>
-                    <div class="code-block">
-                        <pre><code>/* Focus visible en teclado */
-button:focus-visible,
-a:focus-visible {
-    outline: 2px solid var(--brand-color);
-    outline-offset: 2px;
-}
-
-/* Los usuarios pueden navegar con TAB */</code></pre>
-                    </div>
-
-                    <h3 class="subsection__title">3. Atributos ARIA</h3>
-                    <div class="code-block">
-                        <pre><code>&lt;!-- Botón con aria-label --&gt;
-&lt;button aria-label="Abrir menú de navegación"&gt;
-    &lt;svg&gt;...&lt;/svg&gt;
-&lt;/button&gt;
-
-&lt;!-- Estado del menú --&gt;
-&lt;button aria-expanded="false" aria-controls="menu-nav"&gt;
-    Menú
-&lt;/button&gt;
-
-&lt;!-- Elemento controlado --&gt;
-&lt;nav id="menu-nav"&gt;...&lt;/nav&gt;</code></pre>
-                    </div>
-
-                    <h3 class="subsection__title">4. Diseño Responsivo = Accesible</h3>
-                    <ul class="benefits-list">
-                        <li>✓ Texto legible sin zoom en móvil</li>
-                        <li>✓ Elementos táctiles &gt;= 44x44px</li>
-                        <li>✓ Suficiente espaciado entre elementos interactivos</li>
-                        <li>✓ Colores no como único indicador de información</li>
-                    </ul>
-                </section>
-
-                <!-- Sección: Formulario -->
-                <section class="section" id="formulario">
-                    <h2 class="section__title">📝 Formularios: Ley de Fitts y Validación</h2>
-                    <p class="section__text">Los formularios móviles deben ser fáciles de completar. La Ley de Fitts establece que el tiempo necesario para alcanzar un objetivo depende de su tamaño y distancia. Aplicamos esto con inputs de <strong>mínimo 44x44px</strong> en móvil:</p>
-
-                    <h3 class="subsection__title">Altura de Input (Ley de Fitts)</h3>
-                    <div class="code-block">
-                        <pre><code>.form__input,
-.form__select {
-    min-height: 44px;      /* WCAG AA recomendado */
-    padding: var(--space-md);
-    font-size: var(--font-size-base);
-    border: 1px solid var(--border-color);
-    border-radius: 0.5rem;
-}
-
-/* En móvil: Solo 1 columna */
-.form {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-lg);
-}
-
-/* En desktop: 2 columnas */
-@media (min-width: 1024px) {
-    .form {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-}</code></pre>
-                    </div>
-
-                    <h3 class="subsection__title">Validación Visual con CSS</h3>
-                    <div class="code-block">
-                        <pre><code>/* Borde rojo si contiene errores */
-.form__input:invalid:not(:placeholder-shown) {
-    border-color: #EF4444;
-    background-color: rgba(239, 68, 68, 0.05);
-}
-
-/* Verde si es válido */
-.form__input:valid {
-    border-color: var(--accent-color);
-}</code></pre>
-                    </div>
-
-                    <h3 class="subsection__title">Prueba el formulario abajo:</h3>
-
-                    <form class="form" aria-label="Formulario de contacto">
-                        <div class="form__group">
-                            <label for="nombre" class="form__label">Nombre</label>
-                            <input type="text" id="nombre" class="form__input" placeholder="Tu nombre completo" required>
+                        <div class="form-group">
+                            <label for="message">Mensaje:</label>
+                            <textarea id="message" class="form-input" placeholder="Tu mensaje sobre Fiddlesticks" rows="4" required></textarea>
                         </div>
-
-                        <div class="form__group">
-                            <label for="email" class="form__label">Email</label>
-                            <input type="email" id="email" class="form__input" placeholder="tu@email.com" required>
-                        </div>
-
-                        <div class="form__group">
-                            <label for="tema" class="form__label">Tema favorito</label>
-                            <select id="tema" class="form__select" required>
-                                <option value="">Selecciona un tema</option>
-                                <option value="grid">CSS Grid - Layouts complejos</option>
-                                <option value="flexbox">Flexbox - Componentes</option>
-                                <option value="variables">Variables CSS - Design Tokens</option>
-                                <option value="a11y">Accesibilidad - WCAG</option>
-                            </select>
-                        </div>
-
-                        <div class="form__group form__group--checkbox">
-                            <input type="checkbox" id="acepto" class="form__checkbox" required>
-                            <label for="acepto" class="form__label form__label--checkbox">Acepto aprender CSS nativo sin SASS/SCSS</label>
-                        </div>
-
-                        <button type="submit" class="form__submit">Enviar Respuesta</button>
+                        <button type="submit" class="form-button">Enviar Consulta</button>
                     </form>
-                </section>
-
-                <!-- Sección: Resumen -->
-                <section class="section" id="resumen">
-                    <h2 class="section__title">✨ Checklist: Elementos de Diseño Responsive</h2>
-                    <p class="section__text">Para verificar que tu diseño responsive está completo, asegúrate de cumplir con estos puntos:</p>
-
-                    <div class="checklist">
-                        <div class="checklist__item">
-                            <input type="checkbox" id="check1" class="checklist__input">
-                            <label for="check1" class="checklist__label"><strong>Mobile First:</strong> Estilos base sin media queries</label>
-                        </div>
-                        <div class="checklist__item">
-                            <input type="checkbox" id="check2" class="checklist__input">
-                            <label for="check2" class="checklist__label"><strong>Tipografía Fluida:</strong> Uso de <code>clamp()</code></label>
-                        </div>
-                        <div class="checklist__item">
-                            <input type="checkbox" id="check3" class="checklist__input">
-                            <label for="check3" class="checklist__label"><strong>Design Tokens:</strong> Variables CSS para colores y espaciado</label>
-                        </div>
-                        <div class="checklist__item">
-                            <input type="checkbox" id="check4" class="checklist__input">
-                            <label for="check4" class="checklist__label"><strong>CSS Grid:</strong> Layouts complejos con columnas/filas</label>
-                        </div>
-                        <div class="checklist__item">
-                            <input type="checkbox" id="check5" class="checklist__input">
-                            <label for="check5" class="checklist__label"><strong>Flexbox:</strong> Componentes y alineación</label>
-                        </div>
-                        <div class="checklist__item">
-                            <input type="checkbox" id="check6" class="checklist__input">
-                            <label for="check6" class="checklist__label"><strong>3 Breakpoints:</strong> Móvil, tablet, desktop</label>
-                        </div>
-                        <div class="checklist__item">
-                            <input type="checkbox" id="check7" class="checklist__input">
-                            <label for="check7" class="checklist__label"><strong>Accesibilidad:</strong> Contraste, focus, aria-labels</label>
-                        </div>
-                        <div class="checklist__item">
-                            <input type="checkbox" id="check8" class="checklist__input">
-                            <label for="check8" class="checklist__label"><strong>Menú Responsivo:</strong> Hamburguesa en móvil</label>
-                        </div>
-                        <div class="checklist__item">
-                            <input type="checkbox" id="check9" class="checklist__input">
-                            <label for="check9" class="checklist__label"><strong>Tablas Responsivas:</strong> Card view en móvil</label>
-                        </div>
-                        <div class="checklist__item">
-                            <input type="checkbox" id="check10" class="checklist__input">
-                            <label for="check10" class="checklist__label"><strong>Tema Oscuro:</strong> Modo dark implementado</label>
-                        </div>
-                    </div>
-                </section>
-            </main>
-
-            <!-- Footer -->
-            <footer class="footer">
-                <div class="footer__left">
-                    <p class="footer__text">Copyright © 2025 - 2º DAW - IES Cura Valera</p>
                 </div>
-                <div class="footer__right">
-                    <nav class="footer__social" aria-label="Redes sociales">
-                        <a href="#" class="footer__link" aria-label="GitHub">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                            </svg>
-                        </a>
-                        <a href="#" class="footer__link" aria-label="LinkedIn">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
-                            </svg>
-                        </a>
-                        <a href="#" class="footer__link" aria-label="Twitter">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M23.953 4.57a10 10 0 002.856-10.86 10.002 10.002 0 01-2.8.56 4.926 4.926 0 002.117-2.722c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-                            </svg>
-                        </a>
-                    </nav>
-                </div>
-            </footer>
-        </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="social-menu">
+                <a href="#" class="social-menu__link" aria-label="Síguenos en X (Twitter)"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="social-menu__link" aria-label="Síguenos en Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="social-menu__link" aria-label="Únete a nuestro Discord"><i class="bi bi-discord"></i></a>
+                <a href="#" class="social-menu__link" aria-label="Suscríbete en YouTube"><i class="bi bi-youtube"></i></a>
+            </div>
+            <p class="footer__copy">Diseño Full-Stack por Josué e Ismael &copy; 2024</p>
+        </footer>
     </div>
 
-    <!-- Botón Ir Arriba con Progreso Circular -->
-    <button class="scroll-to-top" aria-label="Volver al inicio" title="Volver al inicio">
-        <svg viewBox="0 0 40 40">
-            <circle class="progress-ring__circle" cx="20" cy="20" r="18"></circle>
-            <circle class="progress-ring__progress" cx="20" cy="20" r="18"></circle>
-        </svg>
-        <svg style="position: absolute; width: 24px; height: 24px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="18 15 12 9 6 15"></polyline>
-        </svg>
-    </button>
-
-    <script src="js/main.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>

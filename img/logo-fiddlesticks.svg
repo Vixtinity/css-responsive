@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Logo SVG transparente: creado como placeholder vectorial -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" role="img" aria-label="Fiddlesticks Logo">
+  <title>Fiddlesticks Logo</title>
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1">
+      <stop offset="0%" stop-color="#4CAF50" />
+      <stop offset="100%" stop-color="#FF5722" />
+    </linearGradient>
+  </defs>
+  <!-- Background intentionally left transparent -->
+  <!-- Simple emblem: stylized mask + spikes -->
+  <g transform="translate(10,10)" fill="none" stroke="url(#g1)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <!-- mask outline -->
+    <path d="M20 10 C 10 10, 6 26, 20 34 C 34 26, 30 10, 20 10 Z" fill="#0A0A0A" opacity="0.9"/>
+    <!-- eyes -->
+    <circle cx="14" cy="20" r="2.6" fill="#FFEBEE" />
+    <circle cx="26" cy="20" r="2.6" fill="#FFEBEE" />
+    <!-- spikes / straw -->
+    <path d="M2 6 L8 0 M10 4 L16 -2 M28 3 L34 -3 M36 8 L44 2" stroke="url(#g1)" stroke-width="3"/>
+  </g>
+  <!-- Wordmark (visually hidden for accessibility, kept small) -->
+  <text x="80" y="52" font-family="Inter, Arial, sans-serif" font-size="14" fill="url(#g1)" opacity="0.9">Fiddlesticks</text>
+</svg>
